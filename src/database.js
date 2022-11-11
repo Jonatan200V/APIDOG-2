@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-
+import * as pg from 'pg';
 import { Sequelize } from 'sequelize';
 
 dotenv.config();
@@ -16,6 +16,7 @@ const sequelize = new Sequelize(
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+    dialectModule: pg,
   }
 );
 export default sequelize;
