@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import * as pg from 'pg';
+import pg from 'pg';
 import { Sequelize } from 'sequelize';
 
 dotenv.config();
